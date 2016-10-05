@@ -1,7 +1,15 @@
 var http = require('http');
 
 function handleRequest(req, res){
-  res.end('thanks');
+
+  if(!req.headers.cookie){
+    res.writeHead(200, {
+      'Content-Type': 'text/plain',
+      'Set-Cookie': createUUID()
+    });
+    res.end("This is your first time here");
+  }
+  else{ res.end("you've been here before: " + req.headers.cookie)}
 }
 
 var server = http.createServer(handleRequest);
