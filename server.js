@@ -1,8 +1,8 @@
 var http = require('http');
 
 function handleRequest(req, res){
-
-res.end('thanks')
+  res.end('thanks');
+}
 
 var server = http.createServer(handleRequest);
 
