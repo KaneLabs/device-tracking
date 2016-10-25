@@ -3,7 +3,7 @@ Device Recognition for Augur Challenge
 Possible sources for fingerprinting devices
 
 ##Browser
-- cookies
+- ~~cookies~~
 - flash local shared objects
 - silverlight isolated storage (shared between non icognito browsers)
 - HTML5 localstorage
